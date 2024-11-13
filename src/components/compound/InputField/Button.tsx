@@ -1,6 +1,6 @@
 import { type ButtonHTMLAttributes, type ReactNode } from 'react';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface ButtonDefaultProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -18,7 +18,7 @@ export default function Button({
 }: ButtonDefaultProps) {
   return (
     <button
-      className={twMergeConfig(
+      className={twMerge(
         // eslint-disable-next-line prettier/prettier
         `text-primary-body absolute right-0 mx-4 my-2 flex w-auto translate-y-8 cursor-pointer
         items-center justify-center rounded-full border-none bg-transparent text-[1.1rem]

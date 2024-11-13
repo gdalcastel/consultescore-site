@@ -13,7 +13,8 @@ const config: Config = {
       },
       boxShadow: {
         'white-card': '7px 8px 27.4px 2px #0000001A',
-        'header-card': '0px 2px 7.5px 0px #00000014'
+        'header-card': '0px 2px 7.5px 0px #00000014',
+        'photo-grid': '0px 4px 6px -1px #0000001A'
       }
     }
   },

@@ -27,14 +27,9 @@ export default function RootLayout({
         <Header />
         <div
           style={{ height: 'calc(100svh - 4rem)' }}
-          className="flex h-full w-full flex-col items-center overflow-y-auto"
+          className="scrollLight flex h-full w-full flex-col items-center overflow-y-auto"
         >
-          <div
-            style={{ height: 'calc(100svh)' }}
-            className="flex h-full w-full items-center justify-center"
-          >
-            {children}
-          </div>
+          {children}
         </div>
       </body>
     </html>

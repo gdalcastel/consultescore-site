@@ -5,24 +5,24 @@ import Logomarca from '@/style/icons/logomarca';
 
 export function Header() {
   return (
-    <div className="flex h-16 w-full items-center px-20 shadow-header-card">
+    <div className="z-50 flex h-16 w-full items-center px-20 shadow-header-card">
       <Logomarca />
       <nav className="flex h-auto w-full items-center justify-end gap-8">
         <NavHeader
           text={'Planos'}
-          href={'/'}
+          href="#planos"
         />
         <NavHeader
           text={'Depoimentos'}
-          href={'/'}
+          href="#depoimentos"
         />
         <NavHeader
           text={'FAQ'}
-          href={'/'}
+          href="#faq"
         />
         <NavHeader
           text={'Contato'}
-          href={'/'}
+          href="#contato"
         />
         <AnchorButton
           colorButton="purple"

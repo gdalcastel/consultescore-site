@@ -6,7 +6,7 @@ import {
   type UseFormRegisterReturn
 } from 'react-hook-form';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
@@ -18,7 +18,7 @@ interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 export default function TextArea({ className, register, error, field, ...rest }: TextAreaProps) {
   return (
     <textarea
-      className={twMergeConfig(
+      className={twMerge(
         // eslint-disable-next-line prettier/prettier
         `text-visiu-blue-150 placeholder:text-visiu-gray-100 flex w-full max-w-[25rem] resize-none
         rounded-[.625rem] border-[1px] border-[#C6C6C6] px-2 py-2 text-sm placeholder:text-sm

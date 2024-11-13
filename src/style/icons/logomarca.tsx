@@ -9,6 +9,7 @@ function Logomarca(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGE
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      className="shrink-0"
       {...props}
     >
       <path

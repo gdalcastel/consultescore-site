@@ -5,9 +5,7 @@ import { InputData } from './Input';
 import { InputDataMask } from './InputMask';
 import { Label } from './Label';
 import Root from './Root';
-import SearchProject from './SearchProjects';
-import SearchSelect from './SearchSelect';
-import Select from './Select';
+import { SelectData } from './Select';
 import TextArea from './TextArea';
 
 export const InputField = {
@@ -19,7 +17,5 @@ export const InputField = {
   Check,
   Button,
   TextArea,
-  Select,
-  SearchSelect,
-  SearchProject
+  SelectData
 };

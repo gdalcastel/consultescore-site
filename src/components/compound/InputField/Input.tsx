@@ -8,7 +8,7 @@ import {
   type UseFormRegisterReturn
 } from 'react-hook-form';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface LabelProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
@@ -22,20 +22,19 @@ export const InputData = forwardRef<HTMLInputElement, LabelProps>(
   ({ className, register, error, field, ...rest }, ref) => {
     return (
       <input
-        ref={ref} // Aplique o ref aqui
-        className={twMergeConfig(
+        ref={ref}
+        className={twMerge(
           // eslint-disable-next-line prettier/prettier
-          `placeholder:text-pr flex h-[2.5rem] w-full max-w-[25rem] rounded-[.625rem] px-4
-          font-montserrat text-body-default text-primary-body placeholder:font-montserrat
-          placeholder:text-body-default placeholder:font-normal placeholder:text-primary-dark-grey
-          focus:outline focus:outline-4 focus:outline-primary-lavender focus:border-none
-          ${error ? 'border-[2px] border-notification-red' : !field ? 'border-[1px] border-primary-medium-grey' : ''}
+          `placeholder:text-[#949494] flex h-[2.5rem] w-full max-w-[25rem] rounded-[.625rem] px-4
+          font-poppins text-sm text-black placeholder:font-poppins placeholder:text-sm placeholder:font-normal
+          focus:outline focus:outline-2 focus:outline-[#0E67C2] focus:border-none
+          ${error ? 'border-[2px] border-red-500' : !field ? 'border-[1px] border-[#C1C1C1]' : ''}
           `,
           className
         )}
         autoComplete="off"
-        {...register} // Mantenha o spread dos registros
-        {...rest} // Mantenha o spread de outras propriedades
+        {...register}
+        {...rest}
       />
     );
   }

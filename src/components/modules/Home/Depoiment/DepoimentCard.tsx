@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import Star from '@/style/icons/star';
 
-export interface CardPersonProps {
+export interface DepoimentProps {
   name: string;
   office: string;
   stars: number;
@@ -10,13 +10,7 @@ export interface CardPersonProps {
   image: string;
 }
 
-export default function DepoimentCard({
-  name,
-  office,
-  stars,
-  description,
-  image
-}: CardPersonProps) {
+export default function DepoimentCard({ name, office, stars, description, image }: DepoimentProps) {
   const starArray = [1, 2, 3, 4, 5];
   return (
     <div className="border-visiu-gray-50 shadow-visiu-17 mb-4 flex h-[23.188rem] w-[25.75rem] snap-center snap-always flex-col gap-3 gap-[2rem] rounded-[.625rem] border-[1px] bg-white p-[2rem]">

@@ -6,7 +6,7 @@ export default function useWindowSize() {
   useEffect(() => {
     setWindowSize({
       width: window.innerWidth,
-      height: window.innerHeight,
+      height: window.innerHeight
     });
   }, []);
 
@@ -14,7 +14,7 @@ export default function useWindowSize() {
     const handleSize = () => {
       setWindowSize({
         width: window.innerWidth,
-        height: window.innerHeight,
+        height: window.innerHeight
       });
     };
 

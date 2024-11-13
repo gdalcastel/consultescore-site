@@ -6,9 +6,9 @@ export default function UseCloseModals(closeSelect: () => void) {
   useEffect(() => {
     function handleClickout(event: any) {
       if (
-        selectRef.current
-        && !selectRef.current.contains(event.target as Node)
-        && event?.target?.id !== 'buttonModal'
+        selectRef.current &&
+        !selectRef.current.contains(event.target as Node) &&
+        event?.target?.id !== 'buttonModal'
       ) {
         closeSelect();
       }

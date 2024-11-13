@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface RootProps {
   className?: string;
@@ -9,8 +9,6 @@ interface RootProps {
 
 export default function Root({ className, children }: RootProps) {
   return (
-    <div className={twMergeConfig('relative flex h-auto w-full flex-col', className)}>
-      {children}
-    </div>
+    <div className={twMerge('relative flex h-auto w-full flex-col', className)}>{children}</div>
   );
 }

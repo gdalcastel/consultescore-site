@@ -6,7 +6,10 @@ export function Depoiment() {
   const colorAllBubbles = 'bg-[#6667AA]';
   const currentBubbles = 'bg-[#D9D9D9]';
   return (
-    <div className="flex w-full shrink-0 flex-col items-center justify-center gap-20 pb-16 pt-12">
+    <div
+      id="depoimentos"
+      className="flex w-full shrink-0 flex-col items-center justify-center gap-20 pb-16 pt-12"
+    >
       <h4 className="w-full max-w-[76.25rem] text-start font-poppins text-[1.75rem] font-semibold text-black">
         Depoimentos de quem já usou
       </h4>

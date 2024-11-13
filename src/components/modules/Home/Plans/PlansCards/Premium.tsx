@@ -6,7 +6,7 @@ import Check from '@/style/icons/check';
 
 export function Premium() {
   return (
-    <div className="flex h-[34.438rem] w-[24.125rem] max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] border-4 border-[#C3E1FF] px-8 py-[1.625rem] shadow-white-card">
+    <div className="z-10 flex h-[34.438rem] w-[24.125rem] max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] border-4 border-[#C3E1FF] bg-white px-8 py-[1.625rem] shadow-white-card">
       <div className="flex">
         <span className="flex h-auto w-full items-center gap-3">
           <span className="shrink-0">{<Business />}</span>

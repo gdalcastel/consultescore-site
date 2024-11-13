@@ -1,6 +1,6 @@
 import { type InputHTMLAttributes } from 'react';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface PropsCheck extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
@@ -10,7 +10,7 @@ export function Check({ className, ...rest }: PropsCheck) {
   return (
     <input
       type="checkbox"
-      className={twMergeConfig(
+      className={twMerge(
         'accent-primary-dark-blue focus:outline-primary-lavender h-4 w-4',
         className
       )}

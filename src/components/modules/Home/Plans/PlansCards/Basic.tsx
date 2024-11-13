@@ -8,7 +8,7 @@ import X from '@/style/icons/x';
 
 export function Basic() {
   return (
-    <div className="flex h-[32.125rem] max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] px-8 py-6 shadow-white-card">
+    <div className="z-10 flex h-[32.125rem] max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] bg-white px-8 py-6 shadow-white-card">
       <span className="flex h-auto w-full items-center gap-3">
         <span className="shrink-0">{<User />}</span>
         <p className="font-poppins text-base font-semibold text-black">Basic</p>

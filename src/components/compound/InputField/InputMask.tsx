@@ -8,7 +8,7 @@ import {
 } from 'react-hook-form';
 import InputMask from 'react-input-mask';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface LabelProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
@@ -26,17 +26,23 @@ export function InputDataMask({ className, register, field, mask, error, ...rest
       alwaysShowMask={false}
       mask={mask}
       autoComplete="off"
-      className={twMergeConfig(
+      className={twMerge(
         // eslint-disable-next-line prettier/prettier
-        `font-montserrat text-primary-body placeholder:font-montserrat placeholder:text-pr placeholder:text-primary-dark-grey
-        focus:outline-primary-lavender flex h-[2.5rem] w-full max-w-[25rem] rounded-[.625rem] px-2 text-body-default placeholder:text-body-default
-        placeholder:font-normal focus:outline focus:outline-4 md:rounded-[.4rem]
-        ${error && 'border-[2px] border-notification-red'} 
-        ${!field && !error && 'border-[1px] border-primary-medium-grey'}`,
+        `placeholder:text-[#949494] flex h-[2.5rem] w-full max-w-[25rem] rounded-[.625rem] px-4
+          font-montserrat text-sm text-black placeholder:font-poppins placeholder:text-sm placeholder:font-normal
+          focus:outline focus:outline-2 focus:outline-[#0E67C2] focus:border-none
+        ${error && 'border-[2px] border-red-500'} 
+        ${!field && !error && 'border-[1px] border-[#C1C1C1]'}`,
         className
       )}
       {...register}
-      {...rest}
-    />
+    >
+      {(inputProps) => (
+        <input
+          {...inputProps}
+          {...rest} // Qualquer outra propriedade adicional
+        />
+      )}
+    </InputMask>
   );
 }

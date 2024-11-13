@@ -1,6 +1,6 @@
 import { type LabelHTMLAttributes, type ReactNode } from 'react';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   text?: string;
@@ -11,15 +11,15 @@ interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
 export function Label({ text, className, mandatory = false, paragraph, ...rest }: LabelProps) {
   return (
     <label
-      className={twMergeConfig(
-        'font-montserrat text-body-default text-primary-body mb-[.5rem] flex gap-1 font-medium',
+      className={twMerge(
+        'mb-[.5rem] flex gap-1 font-poppins text-sm font-medium text-black',
         className
       )}
       {...rest}
     >
       {paragraph}
       {text}
-      <p className="text-primary-pink">{mandatory && '*'}</p>
+      <p className="font-poppins text-sm font-normal text-[#0E67C2]">{mandatory && '*'}</p>
     </label>
   );
 }

@@ -7,7 +7,7 @@ import ProfessionalIcon from '@/style/icons/professionalIcon';
 
 export function Professional() {
   return (
-    <div className="flex h-[32.125rem] max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] px-8 py-6 shadow-white-card">
+    <div className="z-10 flex h-[32.125rem] max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] bg-white px-8 py-6 shadow-white-card">
       <div className="flex">
         <span className="flex h-auto w-full items-center gap-3">
           <span className="shrink-0">{<ProfessionalIcon />}</span>

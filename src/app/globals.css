@@ -22,3 +22,74 @@ body {
 button {
   cursor: pointer;
 }
+
+select:valid {
+  color: black; /* Quando o valor for válido, mude para preto */
+  
+}
+
+select:invalid {
+  color: #949494; /* Quando o valor for inválido ou vazio, mantenha o cinza */
+}
+
+.hiddenScroll::-webkit-scrollbar {
+  width: 12px;
+  height: 0px;
+}
+
+.scrollLight::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+  border-radius: 4px;
+}
+
+.scrollLight::-webkit-scrollbar-thumb {
+  background-color: #003D82; /* Cor da barra de rolagem */
+  border-radius: 4px; /* Raio da borda da barra de rolagem */
+}
+
+.scrollLight::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Cor do fundo da barra de rolagem */
+}
+
+.AccordionChevron {
+  transition: transform 300ms;
+}
+
+.AccordionTrigger[aria-expanded='true'] .AccordionChevron {
+  transform: rotate(180deg);
+}
+
+.AccordionContent {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 300ms ease-out;
+  will-change: max-height;
+}
+
+.AccordionContent[data-state="open"] {
+  max-height: 1000px; /* Defina um valor suficientemente alto para o conteúdo expandido */
+  animation: slideDown 300ms ease-out forwards;
+}
+
+.AccordionContent[data-state="closed"] {
+  max-height: 0;
+  animation: slideUp 300ms ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1000px; /* Deve ser o mesmo valor usado acima */
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 1000px;
+  }
+  to {
+    max-height: 0;
+  }
+}

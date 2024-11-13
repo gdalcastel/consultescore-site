@@ -1,12 +1,13 @@
 import Image from 'next/image';
 
 import AnchorButton from '@/components/basics/Buttons/AnchorButton';
+import WaveAndBubbleDesktop from '@/style/icons/waveAndBubbleDesktop';
 
 export function Cover() {
   return (
-    <div className="flex h-[38.5rem] w-full shrink-0 items-center justify-center">
-      <div className="mx-auto grid w-full max-w-[70.5rem] grid-cols-[25.125rem,1fr] gap-24">
-        <div className="flex w-full max-w-[25.125rem] flex-col items-center">
+    <div className="relative flex h-[38.5rem] w-full shrink-0 items-center justify-center overflow-hidden">
+      <div className="z-40 mx-auto grid w-full max-w-[70.5rem] grid-cols-[25.125rem,1fr] place-content-center gap-24">
+        <div className="flex w-full max-w-[25.125rem] flex-col items-center justify-center">
           <h1 className="font-poppins text-[2rem] font-bold text-black">
             Transforme a gestão de suas consultas de crédito com eficiência e precisão.
           </h1>
@@ -19,14 +20,18 @@ export function Cover() {
             text="Experimente Agora"
           />
         </div>
-        <figure className="relative h-full max-h-[21.875rem] w-full max-w-[39.313rem]">
+
+        <figure className="relative h-[24.438rem] w-[39.313rem] shrink-0">
           <Image
-            src="/imageDesktop.png"
+            src="/screenDesktop.png"
             alt="Pessoas em uma mesa olhando para um mesmo computador"
             fill
-            objectFit="contain"
+            priority
           />
         </figure>
+      </div>
+      <div className="absolute translate-x-[2.5rem]">
+        <WaveAndBubbleDesktop />
       </div>
     </div>
   );
