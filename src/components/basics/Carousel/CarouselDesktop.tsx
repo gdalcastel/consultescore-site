@@ -118,7 +118,7 @@ export function CarouselDesktop({
   }, [sizePage, WidthElement]);
 
   return (
-    <div className="z-0 hidden h-full w-full flex-col items-center justify-center sm:flex">
+    <div className="z-0 hidden h-full w-full flex-col items-center justify-center md:flex">
       <div className="relative flex h-auto w-full justify-center">
         <div className="absolute right-0 top-0 flex -translate-y-[7.5rem] gap-6">
           <button

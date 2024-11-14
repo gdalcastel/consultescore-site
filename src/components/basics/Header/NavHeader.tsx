@@ -18,7 +18,7 @@ export function NavHeader({ href, text }: NavProps) {
   };
   return (
     <a
-      className="gap-2 text-center font-poppins text-sm font-medium text-black"
+      className="hidden gap-2 text-center font-poppins text-sm font-medium text-black lg:block"
       href={href || '/'}
       onClick={handleClick}
       // target="_blank"

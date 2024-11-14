@@ -42,7 +42,7 @@ export default function DepoimentCard({ name, office, stars, description, image 
             src={image}
             alt="foto usuário"
             fill
-            object-fit="cover"
+            sizes="100vw"
           />
         </figure>
         <span className="flex flex-col">

@@ -8,9 +8,9 @@ export function Depoiment() {
   return (
     <div
       id="depoimentos"
-      className="flex w-full shrink-0 flex-col items-center justify-center gap-20 pb-16 pt-12"
+      className="flex w-full shrink-0 flex-col items-center justify-center gap-10 py-0 lg:gap-20 lg:pb-16 lg:pt-12"
     >
-      <h4 className="w-full max-w-[76.25rem] text-start font-poppins text-[1.75rem] font-semibold text-black">
+      <h4 className="w-full max-w-[76.25rem] text-center font-poppins text-xl font-semibold text-black md:text-start md:text-[1.75rem]">
         Depoimentos de quem já usou
       </h4>
       <CarouselDesktop
@@ -115,6 +115,7 @@ export function Depoiment() {
           stars={5}
         />
       </CarouselDesktop>
+      <div className="flex lg:hidden"> Colocar swipper</div>
     </div>
   );
 }

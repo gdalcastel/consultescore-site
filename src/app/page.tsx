@@ -13,7 +13,7 @@ import { Footer } from '@/components/basics/Footer';
 
 export default function Home() {
   return (
-    <main className="flex w-full flex-col gap-[3rem]">
+    <main className="flex w-full flex-col gap-0 lg:gap-[3rem]">
       <Cover />
       <Benefit />
       <StepByStep />

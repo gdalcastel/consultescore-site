@@ -8,14 +8,14 @@ import Web from '@/style/icons/web';
 
 export function StepByStep() {
   return (
-    <div className="flex h-[37rem] w-full shrink-0 flex-col items-center justify-center bg-gradient-to-b from-[#F1F5F9] to-[#FFFFFF] py-[5rem]">
-      <h2 className="font-poppins text-[1.75rem] font-semibold text-black">
+    <div className="flex w-full shrink-0 flex-col items-center justify-center bg-gradient-to-b from-[#F1F5F9] to-[#FFFFFF] px-5 py-6 lg:py-[5rem] xl:h-[37rem]">
+      <h2 className="max-w-[15.438rem] text-center font-poppins text-xl font-semibold text-black md:max-w-full md:text-[1.75rem]">
         Passo a Passo com Consultescore
       </h2>
-      <p className="mt-2 font-poppins text-sm font-normal text-[#696969]">
+      <p className="mt-2 max-w-[15.438rem] text-center font-poppins text-sm font-normal text-[#696969] md:max-w-full">
         Siga esses passos e otimize suas consultas de crédito.
       </p>
-      <div className="mb-20 mt-14 flex h-[15.25rem] w-full items-stretch justify-center gap-6">
+      <div className="my-8 flex h-auto w-full flex-wrap items-stretch justify-center gap-4 sm:max-w-[38rem] lg:mb-20 lg:mt-14 lg:gap-6 xl:h-[15.25rem] xl:max-w-full">
         <Step
           icon={<StrategyDevelopment />}
           title={'Selecionar Plano'}
@@ -43,7 +43,13 @@ export function StepByStep() {
       </div>
       <AnchorButton
         text={'Experimente Agora'}
+        size="sm"
+        className="flex max-w-[18.75rem] sm:hidden"
+      />
+      <AnchorButton
+        text={'Experimente Agora'}
         size="md"
+        className="hidden sm:flex"
       />
     </div>
   );

@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import ButtonDefault from '@/components/basics/Buttons/ButtonDefault';
 import { InputField } from '@/components/compound/InputField';
@@ -11,15 +11,11 @@ import BubbleForm from '@/style/icons/bubbleForm';
 
 export function Form() {
   const [isPending, setIsPending] = useState<boolean>(false);
-  const { errors, handleSubmit, register, watch } = UseReactHookForm({
+  const { errors, handleSubmit, register, watch, reset } = UseReactHookForm({
     schemaZodResolver: BusinessSchema
   });
 
   const tel = watch('tel');
-
-  useEffect(() => {
-    console.log('tel', tel);
-  }, [tel]);
 
   async function handleSubmitForm(data: SchemaBusiness) {
     setIsPending(true);
@@ -27,17 +23,18 @@ export function Form() {
     setTimeout(() => {
       setIsPending(false);
     }, 5000);
+    reset();
   }
 
   return (
     <div
       id="contato"
-      className="flex w-full items-center justify-center bg-gradient-to-b from-[#F1F5F9] to-[#FFFFFF]"
+      className="flex w-full items-center justify-center bg-gradient-to-b from-[#F1F5F9] to-[#FFFFFF] pb-14 pt-11 lg:py-0"
     >
-      <div className="mx-auto grid w-full grid-cols-[46.313rem,27rem] place-content-center items-center gap-x-14">
-        <div className="flex w-full flex-col items-start gap-[2rem]">
+      <div className="mx-auto grid w-full grid-cols-1 place-content-center items-center gap-x-14 px-5 xl:grid-cols-[46.313rem,27rem]">
+        <div className="flex w-full max-w-[40rem] flex-col items-center justify-center gap-[2rem] justify-self-center md:items-start">
           <div className="flex w-full max-w-[27.125rem] flex-col items-start gap-4">
-            <p className="font-poppins text-[1.5rem] font-semibold text-black">
+            <p className="font-poppins text-xl font-semibold text-black md:text-[1.5rem] md:font-bold">
               Aproveite nossas soluções para expandir o seu negócio
             </p>
             <p className="font-poppins text-sm font-normal text-[#696969]">
@@ -47,9 +44,9 @@ export function Form() {
           <form
             noValidate
             onSubmit={handleSubmit((data: any) => handleSubmitForm(data))}
-            className="grid w-full grid-cols-2 flex-col gap-6 py-6"
+            className="grid w-full grid-cols-1 justify-items-center gap-0 py-2 md:grid-cols-2 md:gap-6 lg:py-6"
           >
-            <div>
+            <div className="flex w-full flex-col items-center">
               <InputField.Root className="max-w-[25rem]">
                 <InputField.Label
                   htmlFor="name"
@@ -97,7 +94,7 @@ export function Form() {
                 <InputField.Error text={errors.tel?.message} />
               </InputField.Root>
             </div>
-            <div>
+            <div className="flex w-full flex-col items-center">
               <InputField.Root className="max-w-[25rem]">
                 <InputField.Label
                   htmlFor="doubt"
@@ -156,18 +153,27 @@ export function Form() {
             </div>
             <ButtonDefault
               type="submit"
+              size="sm"
+              text={isPending ? 'Enviando...' : 'Enviar Contato'}
+              isLoading={isPending}
+              className="mt-7 flex max-w-[22.5rem] md:hidden"
+            />
+            <ButtonDefault
+              type="submit"
               size="md"
               text={isPending ? 'Enviando...' : 'Enviar Contato'}
               isLoading={isPending}
+              className="hidden md:flex"
             />
           </form>
         </div>
-        <div className="relative flex h-[41.188rem] w-[27rem] items-center justify-center">
+        <div className="relative hidden h-[41.188rem] w-[27rem] items-center justify-center xl:flex">
           <figure className="relative z-20 h-[24.25rem] w-[18.625rem]">
             <Image
               src="/photoForm.png"
               alt="Pessoas em uma mesa olhando para um mesmo computador"
               fill
+              sizes="100vw"
             />
           </figure>
           <div className="absolute -translate-x-[2.2rem] translate-y-[2.8rem]">

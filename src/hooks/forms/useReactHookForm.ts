@@ -22,7 +22,8 @@ export function UseReactHookForm<T extends FieldValues>({
     trigger,
     getFieldState,
     setValue,
-    setFocus
+    setFocus,
+    reset
   } = useForm<T>({
     resolver: zodResolver(schemaZodResolver),
     defaultValues: defaultValues
@@ -39,6 +40,7 @@ export function UseReactHookForm<T extends FieldValues>({
     trigger,
     getFieldState,
     setValue,
-    setFocus
+    setFocus,
+    reset
   };
 }

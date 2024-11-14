@@ -4,15 +4,17 @@ export function FAQ() {
   return (
     <div
       id="faq"
-      className="flex w-full shrink-0 flex-col items-center justify-center gap-4 py-[4.375rem]"
+      className="flex w-full shrink-0 flex-col items-center justify-center gap-4 px-5 pb-16 pt-8 lg:py-[4.375rem]"
     >
-      <p className="font-poppins text-[1.75rem] font-semibold text-black">Perguntas frequentes</p>
+      <p className="font-poppins text-xl font-semibold text-black md:text-[1.75rem] md:font-semibold">
+        Perguntas frequentes
+      </p>
       <p className="max-w-[30.625rem] text-center font-poppins text-sm font-normal text-[#696969]">
         Aqui você encontrará respostas para as dúvidas mais comuns sobre nossos produtos e
         serviços..
       </p>
-      <div className="mt-12 flex h-full w-full max-w-[80.125rem] items-start justify-center gap-6">
-        <div className="flex w-full flex-col gap-6">
+      <div className="mt-6 flex h-full w-full max-w-[80.125rem] flex-col justify-center gap-6 md:items-start lg:mt-12 lg:flex-row">
+        <div className="flex w-full flex-col items-center gap-6">
           <AccordionFAQ
             title={'Com que frequência devo verificar meu Score de crédito?'}
             text={`
@@ -44,7 +46,7 @@ export function FAQ() {
               `}
           />
         </div>
-        <div className="flex w-full flex-col gap-6">
+        <div className="flex w-full flex-col items-center gap-6">
           <AccordionFAQ
             title={'O que devo fazer se meu Score de crédito está baixo?'}
             text={`

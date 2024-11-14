@@ -6,20 +6,28 @@ import Check from '@/style/icons/check';
 
 export function Premium() {
   return (
-    <div className="z-10 flex h-[34.438rem] w-[24.125rem] max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] border-4 border-[#C3E1FF] bg-white px-8 py-[1.625rem] shadow-white-card">
+    <div className="z-10 flex h-auto w-full max-w-[22.5rem] shrink-0 flex-col rounded-[1.25rem] border-4 border-[#C3E1FF] bg-white px-8 py-[1.625rem] shadow-white-card md:h-[34.438rem] md:w-[24.125rem]">
       <div className="flex">
         <span className="flex h-auto w-full items-center gap-3">
-          <span className="shrink-0">{<Business />}</span>
-          <p className="font-poppins text-base font-semibold text-black">Premium</p>
+          <span className="hidden shrink-0 md:block">{<Business />}</span>
+          <span className="block shrink-0 md:hidden">
+            {
+              <Business
+                width={28}
+                height={28}
+              />
+            }
+          </span>
+          <p className="font-poppins text-sm font-semibold text-black sm:text-base">Premium</p>
         </span>
-        <span className="flex w-auto shrink-0 items-center rounded-full bg-[#DFEEF6] px-3 py-1 font-poppins text-xs font-medium text-[#0E67C2]">
+        <span className="flex w-auto shrink-0 items-center rounded-full bg-[#DFEEF6] px-3 py-1 font-poppins text-[.625rem] font-medium text-[#0E67C2] md:text-xs">
           Custo Benefício
         </span>
       </div>
       <div className="mb-8 mt-4 flex h-[1px] w-full shrink-0 bg-[#94A3B8]" />
       <span className="flex w-full flex-col">
-        <p className="font-poppins text-xs font-light text-[#333333]">Mensal</p>
-        <p className="font-poppins text-[2rem] font-bold text-black">R$119,90</p>
+        <p className="font-poppins text-[.625rem] font-light text-[#333333] md:text-xs">Mensal</p>
+        <p className="font-poppins text-2xl font-bold text-black md:text-[2rem]">R$119,90</p>
       </span>
       <div className="mb-[2rem] mt-8 flex flex-col gap-2">
         <span className="flex items-center gap-2">

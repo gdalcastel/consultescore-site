@@ -16,15 +16,19 @@ export function ScoreCard({ description, icon, title, grade }: StepProps) {
   };
 
   return (
-    <div className="relative flex h-auto w-full max-w-[16.5rem] flex-col items-center rounded-[1.25rem] px-6 py-[1rem] shadow-white-card">
-      <span className="shrink-0">{icon}</span>
-      <p className="mb-1 mt-4 font-poppins text-lg font-bold text-black">{title}</p>
-      <p className="text-center font-poppins text-sm font-normal text-[#696969]">{description}</p>
+    <div className="relative flex h-auto w-full max-w-[9.625rem] flex-col items-center gap-2 rounded-[1.25rem] px-4 py-[1rem] shadow-md lg:max-w-[16.5rem] lg:gap-0 lg:px-6 lg:shadow-white-card">
       <span
-        className={`absolute right-0 top-0 flex h-auto w-auto shrink-0 -translate-x-[0.875rem] translate-y-[0.875rem] items-center justify-center rounded-full px-3 py-2 font-poppins text-xs font-medium ${styleGrade[grade]}`}
+        className={`static right-0 top-0 flex h-auto w-auto shrink-0 translate-x-0 translate-y-0 items-center justify-center rounded-full px-3 py-2 font-poppins text-xs font-medium lg:absolute lg:-translate-x-[0.875rem] lg:translate-y-[0.875rem] ${styleGrade[grade]}`}
       >
         {grade}
       </span>
+      <span className="shrink-0">{icon}</span>
+      <p className="mb-0 mt-0 font-poppins text-base font-bold text-black lg:mb-1 lg:mt-4 lg:text-lg">
+        {title}
+      </p>
+      <p className="text-center font-poppins text-xs font-normal text-[#696969] lg:text-sm">
+        {description}
+      </p>
     </div>
   );
 }

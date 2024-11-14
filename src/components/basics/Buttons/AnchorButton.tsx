@@ -4,11 +4,11 @@ import { AnchorHTMLAttributes, type ReactNode } from 'react';
 import { type VariantProps, tv } from 'tailwind-variants';
 
 const button = tv({
-  base: 'font-poppins flex cursor-pointer w-full shrink-0 font-medium items-center justify-center gap-2 rounded-xl px-6 transition-transform duration-200 will-change-transform will-change-brightness active:transform active:brightness-90',
+  base: 'font-poppins max-w-[18.75rem] text-center flex cursor-pointer w-full shrink-0 font-medium items-center justify-center gap-2 rounded-xl transition-transform duration-200 will-change-transform will-change-brightness active:transform active:brightness-90',
   variants: {
     size: {
-      sm: 'text-sm max-w-[12.938rem] h-[2.5rem]',
-      md: 'text-sm max-w-[18.75rem] h-[2.813rem]'
+      sm: 'text-xs h-[2.5rem] px-[.625rem]',
+      md: 'text-sm h-[2.813rem] px-6'
     },
     colorButton: {
       yellow: 'bg-[#FFCF52] text-black',

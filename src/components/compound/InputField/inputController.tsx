@@ -3,7 +3,7 @@
 import { forwardRef, type InputHTMLAttributes } from 'react';
 import { type FieldError, type FieldErrorsImpl, type Merge } from 'react-hook-form';
 
-import { twMergeConfig } from '@/lib/tw-merge-config';
+import { twMerge } from 'tailwind-merge';
 
 interface LabelProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
@@ -19,7 +19,7 @@ export const InputData = forwardRef<HTMLInputElement, LabelProps>(
     return (
       <input
         ref={ref} // Aplique o ref aqui
-        className={twMergeConfig(
+        className={twMerge(
           `placeholder:text-pr font-montserrat text-body-default text-primary-body placeholder:font-montserrat placeholder:text-body-default placeholder:text-primary-dark-grey focus:outline-primary-lavender flex h-[2.5rem] w-full max-w-[25rem] rounded-[.625rem] px-4 placeholder:font-normal focus:border-none focus:outline focus:outline-4 ${error ? 'border-notification-red border-[2px]' : !field ? 'border-primary-medium-grey border-[1px]' : ''}`,
           className
         )}

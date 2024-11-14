@@ -8,15 +8,16 @@ export function Plans() {
   return (
     <div
       id="planos"
-      className="flex w-full shrink-0 flex-col items-center justify-center pt-6"
+      className="flex w-full shrink-0 flex-col items-center justify-center px-5 pt-6"
     >
-      <h3 className="font-poppins text-[1.75rem] font-semibold text-black">
-        Passo a Passo com Consultescore
+      <h3 className="font-poppins text-xl font-semibold text-black md:text-[1.75rem]">
+        Conheça nossos planos
       </h3>
-      <p className="mt-2 font-poppins text-sm font-normal text-[#696969]">
-        Siga esses passos e otimize suas consultas de crédito.
+      <p className="mt-2 max-w-[30rem] text-center font-poppins text-sm font-normal text-[#696969] lg:max-w-full">
+        Explore nossas opções de planos flexíveis que atendem às necessidades de diferentes tipos de
+        negócios.
       </p>
-      <div className="relative mb-20 mt-14 flex h-full w-full max-w-[72.313rem] items-center justify-center gap-6">
+      <div className="relative mb-20 mt-14 flex h-full w-full max-w-[72.313rem] flex-wrap-reverse items-center justify-center gap-6">
         <Basic />
         <Professional />
         <Premium />
