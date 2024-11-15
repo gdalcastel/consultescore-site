@@ -19,7 +19,7 @@ export function FirstStep() {
                   src="/firstGrid/photoOne.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -28,7 +28,7 @@ export function FirstStep() {
                   src="/firstGrid/photoTwo.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -40,7 +40,7 @@ export function FirstStep() {
                   src="/firstGrid/photoThree.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -49,7 +49,7 @@ export function FirstStep() {
                   src="/firstGrid/photoFour.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -58,7 +58,7 @@ export function FirstStep() {
                   src="/firstGrid/photoFive.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -70,7 +70,7 @@ export function FirstStep() {
                   src="/firstGrid/photoSix.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -79,7 +79,7 @@ export function FirstStep() {
                   src="/firstGrid/photoSeven.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -88,7 +88,7 @@ export function FirstStep() {
                   src="/firstGrid/photoEight.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -100,7 +100,7 @@ export function FirstStep() {
                   src="/firstGrid/photoNine.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -109,7 +109,7 @@ export function FirstStep() {
                   src="/firstGrid/photoTen.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -122,7 +122,7 @@ export function FirstStep() {
               src="/mobile/Picture02.png"
               alt="Pessoas em uma mesa olhando para um mesmo computador"
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-[0.313rem]"
             />
           </figure>
@@ -131,7 +131,7 @@ export function FirstStep() {
               src="/mobile/Picture01.png"
               alt="Pessoas em uma mesa olhando para um mesmo computador"
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-[0.313rem]"
             />
           </figure>
@@ -140,7 +140,7 @@ export function FirstStep() {
               src="/mobile/Picture03.png"
               alt="Pessoas em uma mesa olhando para um mesmo computador"
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="rounded-[0.313rem]"
             />
           </figure>

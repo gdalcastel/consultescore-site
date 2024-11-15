@@ -33,7 +33,7 @@ export function Cover() {
           alt="Pessoas em uma mesa olhando para um mesmo computador"
           width={629}
           height={391}
-          loading="lazy"
+          priority
           className="hidden md:flex"
         />
 
@@ -42,7 +42,7 @@ export function Cover() {
           alt="Pessoas em uma mesa olhando para um mesmo computador"
           width={320}
           height={198}
-          loading="lazy"
+          priority
           className="flex md:hidden"
         />
       </div>

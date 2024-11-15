@@ -95,7 +95,7 @@ export function Differenctial() {
                   src="/secondGrid/photoOne.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -104,7 +104,7 @@ export function Differenctial() {
                   src="/secondGrid/photoTwo.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -116,7 +116,7 @@ export function Differenctial() {
                   src="/secondGrid/photoThree.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>
@@ -125,7 +125,7 @@ export function Differenctial() {
                   src="/secondGrid/photoFour.png"
                   alt="Pessoas em uma mesa olhando para um mesmo computador"
                   fill
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-[0.313rem]"
                 />
               </figure>

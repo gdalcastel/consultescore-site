@@ -20,12 +20,11 @@ export function Form() {
 
   async function handleSubmitForm(data: SchemaBusiness) {
     setIsPending(true);
-    console.log(data);
     sendEmail(data);
     setTimeout(() => {
       setIsPending(false);
-    }, 5000);
-    reset();
+      reset();
+    }, 2500);
   }
 
   return (
@@ -175,7 +174,7 @@ export function Form() {
               src="/photoForm.png"
               alt="Pessoas em uma mesa olhando para um mesmo computador"
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </figure>
           <div className="absolute -translate-x-[2.2rem] translate-y-[2.8rem]">

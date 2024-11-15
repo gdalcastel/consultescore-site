@@ -3,6 +3,7 @@
 
 // Import Swiper styles
 import 'swiper/css';
+import { Pagination } from 'swiper/modules';
 
 import DepoimentCard from './DepoimentCard';
 
@@ -12,7 +13,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
 
 export function Depoiment() {
   const colorAllBubbles = 'bg-[#6667AA]';

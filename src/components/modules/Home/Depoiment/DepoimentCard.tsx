@@ -11,7 +11,6 @@ export interface DepoimentProps {
 }
 
 export default function DepoimentCard({ name, office, stars, description, image }: DepoimentProps) {
-  console.log('star', stars);
   const starArray = [1, 2, 3, 4, 5];
   return (
     <div className="border-visiu-gray-50 shadow-visiu-17 mb-4 flex h-auto w-[25.75rem] snap-center snap-always flex-col gap-3 rounded-[.625rem] border-[1px] bg-white p-[2rem] lg:h-[23.188rem] lg:gap-[2rem]">
@@ -40,7 +39,7 @@ export default function DepoimentCard({ name, office, stars, description, image 
             src={image}
             alt="foto usuário"
             fill
-            sizes="100vw"
+            sizes="33vw"
           />
         </figure>
         <span className="flex flex-col items-start">
