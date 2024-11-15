@@ -18,8 +18,8 @@ function Star(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElemen
         />
         <path
           d="M10.274 1.616l2.497 5.059 5.584.816-4.04 3.935.953 5.56-4.994-2.626-4.994 2.626.954-5.56-4.04-3.935 5.583-.816 2.497-5.059z"
-          fill="#FBBC04"
-          stroke="#FBBC04"
+          fill={props.fill || '#FBBC04'}
+          stroke={props.fill || '#FBBC04'}
           strokeWidth={1.61616}
           strokeLinecap="round"
           strokeLinejoin="round"

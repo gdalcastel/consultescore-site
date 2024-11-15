@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
+import sendEmail from '@/actions/sendEmail';
 import ButtonDefault from '@/components/basics/Buttons/ButtonDefault';
 import { InputField } from '@/components/compound/InputField';
 import { SelectData } from '@/components/compound/InputField/Select';
@@ -20,6 +21,7 @@ export function Form() {
   async function handleSubmitForm(data: SchemaBusiness) {
     setIsPending(true);
     console.log(data);
+    sendEmail(data);
     setTimeout(() => {
       setIsPending(false);
     }, 5000);

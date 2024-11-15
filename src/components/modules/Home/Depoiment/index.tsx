@@ -1,6 +1,18 @@
+'use client';
+// Import Swiper React components
+
+// Import Swiper styles
+import 'swiper/css';
+
 import DepoimentCard from './DepoimentCard';
 
 import { CarouselDesktop } from '@/components/basics/Carousel/CarouselDesktop';
+import { depoimentList } from '@/utils/depoimentsList';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 export function Depoiment() {
   const colorAllBubbles = 'bg-[#6667AA]';
@@ -8,114 +20,48 @@ export function Depoiment() {
   return (
     <div
       id="depoimentos"
-      className="flex w-full shrink-0 flex-col items-center justify-center gap-10 py-0 lg:gap-20 lg:pb-16 lg:pt-12"
+      className="flex w-full shrink-0 flex-col items-center justify-center gap-10 py-6 lg:gap-20 lg:pb-16 lg:pt-12"
     >
-      <h4 className="w-full max-w-[76.25rem] text-center font-poppins text-xl font-semibold text-black md:text-start md:text-[1.75rem]">
+      <h4 className="w-full max-w-[76.25rem] text-center font-poppins text-xl font-semibold text-black md:text-[1.75rem] xl:text-start">
         Depoimentos de quem já usou
       </h4>
       <CarouselDesktop
         colorAllBubbles={colorAllBubbles}
         currentBubbles={currentBubbles}
-        nameCarousel="carouselArena1"
+        nameCarousel="carousel"
       >
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
-        <DepoimentCard
-          description="“Utilizei o serviço de consulta de CPF e fiquei extremamente satisfeito com a experiência. Me proporcionando informações claras e detalhadas sobre meu score de crédito. 
-          A consulta foi rápida e confiável, o que me ajudou a entender melhor minha situação financeira e a tomar decisões mais informadas. Recomendo a todos!”"
-          image="/UserThumb.png"
-          name={'dilsones'}
-          office={'visiu'}
-          stars={5}
-        />
+        {depoimentList.map((depoiment) => (
+          <DepoimentCard
+            key={depoiment.name}
+            description={depoiment.description}
+            image={depoiment.image}
+            name={depoiment.name}
+            office={depoiment.office}
+            stars={depoiment.stars}
+          />
+        ))}
       </CarouselDesktop>
-      <div className="flex lg:hidden"> Colocar swipper</div>
+      <div className="flex h-full w-full overflow-hidden lg:hidden">
+        <Swiper
+          pagination={true}
+          modules={[Pagination]}
+          slidesPerView={1}
+        >
+          {depoimentList.map((depoiment) => (
+            <SwiperSlide key={depoiment.name}>
+              <div className="flex w-full justify-center px-5 py-5">
+                <DepoimentCard
+                  description={depoiment.description}
+                  image={depoiment.image}
+                  name={depoiment.name}
+                  office={depoiment.office}
+                  stars={depoiment.stars}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
